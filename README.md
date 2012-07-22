@@ -25,7 +25,7 @@ Override the default remote source lookup eg: `willitmerge --remote myremote`.
 
 #### --ignore
 
-List of github issue numbers to ignore eg 123,240,300.
+List of github issue numbers to ignore eg: `willitmerge --ignore 123,240,300`.
 
 ## Contributing
 
