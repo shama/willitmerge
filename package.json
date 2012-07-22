@@ -1,0 +1,45 @@
+{
+  "name": "willitmerge",
+  "description": "A command line tool to check if pull requests are mergeable.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/shama/willitmerge",
+  "author": {
+    "name": "Kyle Robinson Young",
+    "email": "kyle@dontkry.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shama/willitmerge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shama/willitmerge/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/shama/willitmerge/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/willitmerge",
+  "bin": "bin/willitmerge",
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "async": "~0.1.x",
+    "colors": "0.6.x",
+    "commander": "~1.0.x",
+    "github": "~0.1.x",
+    "mkdirp": "~0.3.x",
+    "request": "~2.9.x",
+    "rimraf": "~2.0.x",
+    "lodash": "~0.4.x"
+  },
+  "devDependencies": {
+    "grunt": "~0.3.x"
+  },
+  "keywords": ["github", "pull request", "merge"]
+}

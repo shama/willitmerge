@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+var wim = require('../lib/willitmerge');
+var opts = require('commander');
+
+function ignore(val) { return val.split(',').map(Number); }
+opts
+  .option('-r, --remote <remote>', 'Name of remote source eg origin, upstream')
+  .option('--ignore <ignore>', 'List of issue #s to ignore eg 120,234,300', ignore)
+  .parse(process.argv)
+;
+
+wim.once('issues', wim.testIssues);
+wim.on('error', wim.onError);
+wim.once('end', wim.onEnd);
+
+wim.run(opts);
