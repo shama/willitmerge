@@ -34,6 +34,7 @@ and run `grunt` before submitting a pull request. Thanks!
 
 ## Release History
 
+* 0.1.1 Order PRs by least amount changed
 * 0.1.0 Built willitmerge tool from grunt-willitmerge
 
 ## License
