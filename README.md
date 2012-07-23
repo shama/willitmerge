@@ -32,6 +32,37 @@ List of github issue numbers to ignore eg: `willitmerge --ignore 123,240,300`.
 For paginating through issues. Default is 30 per page and the max is 100 (set
 by github). eg `willitmerge --perpage 100 --page 2`.
 
+## API
+
+To use willitmerge in your project:
+
+``` javascript
+var wim = require('willitmerge');
+
+// This event is fired after issues have been received from github
+wim.once('issues', function(issues) {
+  // To test all the issues if they will merge then fire the `end` event
+  wim.testIssues(issues);
+
+  // or if you would like to write your own mechanism and test
+  // each issue individually use:
+  wim.testIssue(issue, function(err, iss) { });
+});
+
+// This event is fired after issues have been tested
+wim.once('end', function(issues) {
+  // `willitmerge` will be appended to each issue with the info about the test
+
+  // Call to display the issues report, clean up and end the program
+  wim.onEnd(issues);
+});
+
+// run the program
+wim.run({
+  perpage: 40 // set options here
+});
+```
+
 ## Contributing
 
 This project uses [Grunt](http://gruntjs.com) for development. Please install
