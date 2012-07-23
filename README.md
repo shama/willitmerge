@@ -11,11 +11,9 @@ Install with `npm install -g willitmerge`
 ## Usage
 
 Navigate to the project folder you would like to check then run: `willitmerge`.
-
 This will then look for the remote: upstream or origin in that order. Then
-proceeds to check if each open pull request can be merged.
-
-Please note, this will not actually do any merging... only checks.
+proceeds to check if each open pull request can be merged. Please note, this
+will not actually do any merging... only checks.
 
 ### Options
 
