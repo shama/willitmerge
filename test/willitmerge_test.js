@@ -13,6 +13,7 @@ exports['willitmerge'] = {
   },
   tearDown: function(done) {
     process.stdout.write = oldStdout;
+    wim.onEnd();
     done();
   },
   'find remote, user and repo': function(test) {
