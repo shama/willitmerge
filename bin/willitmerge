@@ -15,7 +15,6 @@ opts
 ;
 
 wim.once('issues', wim.testIssues);
-wim.on('error', wim.onError);
 wim.once('end', wim.onEnd);
 
 wim.run(opts);
