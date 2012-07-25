@@ -34,7 +34,6 @@
     "commander": "~1.0.x",
     "github": "~0.1.x",
     "mkdirp": "~0.3.x",
-    "request": "~2.9.x",
     "rimraf": "~2.0.x",
     "lodash": "~0.4.x"
   },

@@ -5,10 +5,12 @@ var opts = require('commander');
 
 function ignore(val) { return val.split(',').map(Number); }
 opts
-  .option('-r, --remote <remote>', 'Name of remote source eg origin, upstream')
-  .option('--ignore <ignore>', 'List of issue #s to ignore eg 120,234,300', ignore)
-  .option('--perpage <perpage>', 'Number of issues to check at a time, max is 100')
-  .option('--page <page>', 'Page when using perpage pagination')
+  .option('-r, --remote <remote>', 'name of remote source eg origin, upstream')
+  .option('--ignore <ignore>', 'list of issue #s to ignore eg 120,234,300', ignore)
+  .option('--perpage <perpage>', 'number of issues to check at a time, max is 100')
+  .option('--page <page>', 'page when using perpage pagination')
+  .option('--rebase', 'rebase instead of merge')
+  .option('-v, --verbose', 'display output of merge attempts')
   .parse(process.argv)
 ;
 
