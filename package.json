@@ -1,7 +1,7 @@
 {
   "name": "willitmerge",
   "description": "A command line tool to check if pull requests are mergeable.",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "homepage": "https://github.com/shama/willitmerge",
   "author": {
     "name": "Kyle Robinson Young",
