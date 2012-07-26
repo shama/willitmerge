@@ -33,8 +33,6 @@
     "colors": "0.6.x",
     "commander": "~1.0.x",
     "github": "~0.1.x",
-    "mkdirp": "~0.3.x",
-    "rimraf": "~2.0.x",
     "lodash": "~0.4.x"
   },
   "devDependencies": {
