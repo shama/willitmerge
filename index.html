@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>willitmerge</title>
+    <link href='http://fonts.googleapis.com/css?family=Monoton' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="styles.css">
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -19,16 +20,77 @@
       </div>
       <div class="content">
         <h1>willitmerge</h1>
-        <p>A command line tool to check if all open Github pull requests are mergeable (or rebaseable<em>!</em>).</p>
-        <pre>npm install -g willitmerge</pre>
-        <pre>$ willitmerge
-$ willitmerge --rebase --verbose</pre>
-        <p>
+
+        <div class="nav">
           <a href="https://github.com/shama/willitmerge/">view on github</a>
           &nbsp;
           <a href="https://twitter.com/shamakry" class="twitter-follow-button" data-show-count="false">Follow @shamakry</a>
           <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-        </p>
+        </div>
+
+        <p>A command line tool to check if all open Github pull requests are mergeable (or rebaseable<em>!</em>).</p>
+
+        <pre>npm install -g willitmerge</pre>
+
+        <pre>$ willitmerge
+Found 7 open pull requests on github.com/cowboy/grunt.
+Checking.......DONE
+
+Issue #263, https://github.com/cowboy/grunt/pull/263, will it merge? YES!
+Issue #254, https://github.com/cowboy/grunt/pull/254, will it merge? YES!
+Issue #190, https://github.com/cowboy/grunt/pull/190, will it merge? YES!
+Issue #135, https://github.com/cowboy/grunt/pull/135, will it merge? YES!
+Issue #294, https://github.com/cowboy/grunt/pull/294, will it merge? YES!
+Issue #199, https://github.com/cowboy/grunt/pull/199, will it merge? YES!
+Issue #306, https://github.com/cowboy/grunt/pull/306, will it merge? YES!</pre>
+
+        <pre>$ willitmerge --rebase --verbose
+Found 7 open pull requests on github.com/cowboy/grunt.
+Checking.......DONE
+
+Issue #306, https://github.com/cowboy/grunt/pull/306, will it rebase? YES!
+ArturDorochowicz:master -> cowboy:master
+First, rewinding head to replay your work on top of it...
+Fast-forwarded willitmerge-306 to 06a2eb5f702669e3e390fca35d47f9c8f5f69dfb.
+
+Issue #263, https://github.com/cowboy/grunt/pull/263, will it rebase? YES!
+jharding:wip -> cowboy:wip
+First, rewinding head to replay your work on top of it...
+Applying: WIP for #229. Still need to process templates tho.
+Applying: The this.files property now handles template stuff #229.
+Applying: Why do all that work twice? This closes #229.
+
+Issue #254, https://github.com/cowboy/grunt/pull/254, will it rebase? YES!
+MyGGaN:patch-1 -> cowboy:master
+First, rewinding head to replay your work on top of it...
+Fast-forwarded willitmerge-254 to 6345a63b7cff100d6700e2317206621498ae0e58.
+
+Issue #199, https://github.com/cowboy/grunt/pull/199, will it rebase? NO!
+alextucker:wip -> cowboy:wip
+>> CONFLICT (content): Merge conflict in docs/api_file.md
+>> Auto-merging lib/grunt/file.js
+>> Auto-merging test/grunt/file_test.js
+>> CONFLICT (content): Merge conflict in test/grunt/file_test.js
+>> Failed to merge in the changes.
+
+...</pre>
+
+        <pre>$ willitmerge --help
+
+  Usage: willitmerge [options]
+
+  Options:
+
+    -h, --help             output usage information
+    -r, --remote <remote>          name of remote source eg origin, upstream
+    --ignore <ignore>              list of issue #s to ignore eg 120,234,300
+    --perpage <perpage>             number of issues to check at a time, max is 100
+    --page <page>                page when using perpage pagination
+    --rebase               rebase instead of merge
+    -v, --verbose          display output of merge attempts
+    -V, --version          output the version number</pre>
+
+        <p>&nbsp;</p>
       </div>
     </div>
     <script type="text/javascript">

@@ -482,11 +482,27 @@ a:hover {color: #000;}
 .content {
 	width: 520px;
 	float: right;
-}
-.content h1 {
   padding-top: 30px;
 }
+.content h1 {
+  font-family: 'Monoton', Verdana, sans-serif;
+  font-weight: normal;
+  padding: 0;
+  margin: 0 0 10px 0;
+  width: 40%;
+  height: 30px;
+  float: left;
+}
+.nav {
+  width: 60%;
+  height: 14px;
+  padding: 8px 0;
+  margin: 0 0 10px 0;
+  float: right;
+  text-align: right;
+}
 .content pre {
+  font-size: 80%;
 	background-color: #333;
 	color: #fff;
 	border-radius: 5px;
