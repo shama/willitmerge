@@ -501,6 +501,32 @@ a:hover {color: #000;}
   float: right;
   text-align: right;
 }
+.twitter {
+  box-sizing: border-box;
+  height: 20px;
+  max-width: 100%;
+  text-decoration: none;
+  padding: 3px 5px;
+  background-color: #F8F8F8;
+  background-image: -webkit-gradient(linear,left top,left bottom,from(white),to(#DEDEDE));
+  background-image: -moz-linear-gradient(top,white,#DEDEDE);
+  background-image: -o-linear-gradient(top,white,#DEDEDE);
+  background-image: -ms-linear-gradient(top,white,#DEDEDE);
+  background-image: linear-gradient(top,white,#DEDEDE);
+  border: #CCC solid 1px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: #333;
+  font-weight: bold;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  font-size: 80%;
+}
 .content pre {
   font-size: 80%;
 	background-color: #333;
