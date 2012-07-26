@@ -503,11 +503,12 @@ a:hover {color: #000;}
 }
 .twitter {
   box-sizing: border-box;
+  position: relative;
+  top: -6px;
   height: 20px;
   max-width: 100%;
   text-decoration: none;
   padding: 3px 5px;
-  margin: -5px 0 0 0;
   background-color: #F8F8F8;
   background-image: -webkit-gradient(linear,left top,left bottom,from(white),to(#DEDEDE));
   background-image: -moz-linear-gradient(top,white,#DEDEDE);
