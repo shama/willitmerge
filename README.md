@@ -2,7 +2,30 @@
 
 A command line tool to check if pull requests are mergeable.
 
-![willitmerge sample](http://dontkry.com/img/willitmerge.png)
+```
+$ willitmerge
+Found 8 open pull requests on github.com/cakephp/docs.
+Checking........DONE
+
+Issue #376, https://github.com/cakephp/docs/pull/376, will it merge? NO!
+Issue #272, https://github.com/cakephp/docs/pull/272, will it merge? NO!
+Issue #212, https://github.com/cakephp/docs/pull/212, will it merge? NO!
+Issue #209, https://github.com/cakephp/docs/pull/209, will it merge? NO!
+Issue #207, https://github.com/cakephp/docs/pull/207, will it merge? YES!
+Issue #223, https://github.com/cakephp/docs/pull/223, will it merge? YES!
+
+$ willitmerge --rebase
+Found 7 open pull requests on github.com/cowboy/grunt.
+Checking.......DONE
+
+Issue #413, https://github.com/cowboy/grunt/pull/413, will it rebase? YES!
+Issue #405, https://github.com/cowboy/grunt/pull/405, will it rebase? YES!
+Issue #404, https://github.com/cowboy/grunt/pull/404, will it rebase? YES!
+Issue #399, https://github.com/cowboy/grunt/pull/399, will it rebase? YES!
+Issue #395, https://github.com/cowboy/grunt/pull/395, will it rebase? YES!
+Issue #363, https://github.com/cowboy/grunt/pull/363, will it rebase? YES!
+Issue #350, https://github.com/cowboy/grunt/pull/350, will it rebase? YES!
+```
 
 ## Install
 
@@ -73,6 +96,7 @@ and run `grunt` before submitting a pull request. Thanks!
 
 ## Release History
 
+* 0.2.1 Check for invalid github urls
 * 0.2.0 Refactor to use git pull and --rebase instead of applying patches
 * 0.1.2 Add perpage, page options.
 * 0.1.1 Order PRs by least amount changed
